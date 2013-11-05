@@ -1,0 +1,20 @@
+<html>
+	<head>
+		<script src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$.getJSON( "flickr_final.json", function( data ) {
+					console.log(data);
+					var items = [];
+					$.each( data.photos, function( key, val ) {
+						var s = val.url_q.split("/");
+    					items.push( '<img width="40" height="40" style="border:10px solid rgb('+val.color_avg[0]+','+val.color_avg[1]+','+val.color_avg[2]+')" src="images/'+s[s.length-1]+'">' );
+  					});
+ 					$( "<div/>", {
+						html: items.join( "" )
+					}).appendTo( "body" );
+				});
+			});
+		</script>
+	</head>
+</html>
