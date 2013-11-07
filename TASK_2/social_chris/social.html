@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<script src="raphael-min.js"></script>
+	<script src="jquery.transit.min.js"></script>
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Cutive+Mono' rel='stylesheet' type='text/css'>
+	<link href='style.css' rel='stylesheet' type='text/css'>
+	
+	
+  <title> Soziale Vernetzung </title>
+  
+  
+  
+</head>
+<body>
+	
+					
+		
+	<div style="position:absolute;z-index:10;">
+	
+		<div id="lieben" style="padding-left:200px;"><ul></ul></div>
+		<div id="moegen" style="padding-left:200px;"><ul></ul></div>
+		<div id="kennen" style="padding-left:200px;"><ul></ul></div>
+		<div id="neutral" style="padding-left:200px;"><ul></ul></div>
+		<div id="nkennen" style="padding-left:200px;"><ul></ul></div>
+		<div id="nmoegen" style="padding-left:200px;"><ul></ul></div>
+
+	</div>
+
+
+	<script>
+	
+	// Leute in Array eintragen
+	// json leicht modifiziert damit es später etwas leichter hab 
+	// war aber überflüssig
+			
+	var leute = {"verbindung": 
+		[
+		//Alice
+		{
+				"Alice" : 0,
+				"Bob"   : 1,
+				"Chris" : 2,
+				"Diana" : 2,
+				"Ema"   : 5,
+				"Fred"  : 3,
+				"Greg"  : 5,
+				"Henry" : 4,
+				"Iris"  : 1,
+				"Jane"  : 1
+		},
+		// "Bob": 
+		{
+				"Alice" : 2,
+				"Bob"   : 0,
+				"Chris" : 1,
+				"Diana" : 1,
+				"Ema"   : 1,
+				"Fred"  : 4,
+				"Greg"  : 1,
+				"Henry" : 3,
+				"Iris"  : 1,
+				"Jane"  : 2
+		},
+			// "Chris": 
+			{
+				"Alice" : 2,
+				"Bob"   : 2,
+				"Chris" : 0,
+				"Diana" : 1,
+				"Ema"   : 5,
+				"Fred"  : 2,
+				"Greg"  : 2,
+				"Henry" : 2,
+				"Iris"  : 2,
+				"Jane"  : 2
+			},
+			// "Diana": 
+			{
+				"Alice" : 2,
+				"Bob"   : 2,
+				"Chris" : 3,
+				"Diana" : 0,
+				"Ema"   : 5,
+				"Fred"  : 2,
+				"Greg"  : 3,
+				"Henry" : 2,
+				"Iris"  : 2,
+				"Jane"  : 2
+			},
+			// "Ema": 
+			{
+				"Alice" : 5,
+				"Bob"   : 1,
+				"Chris" : 5,
+				"Diana" : 5,
+				"Ema"   : 0,
+				"Fred"  : 2,
+				"Greg"  : 2,
+				"Henry" : 1,
+				"Iris"  : 3,
+				"Jane"  : 1
+			},
+			// "Fred": 
+			{
+				"Alice" : 1,
+				"Bob"   : 4,
+				"Chris" : 1,
+				"Diana" : 1,
+				"Ema"   : 1,
+				"Fred"  : 0,
+				"Greg"  : 2,
+				"Henry" : 2,
+				"Iris"  : 5,
+				"Jane"  : 1
+			},
+			// "Greg": 
+			{
+				"Alice" : 5,
+				"Bob"   : 1,
+				"Chris" : 2,
+				"Diana" : 2,
+				"Ema"   : 3,
+				"Fred"  : 1,
+				"Greg"  : 0,
+				"Henry" : 1,
+				"Iris"  : 3,
+				"Jane"  : 1
+			},
+			// "Henry": 
+			{
+				"Alice" : 2,
+				"Bob"   : 3,
+				"Chris" : 1,
+				"Diana" : 1,
+				"Ema"   : 1,
+				"Fred"  : 2,
+				"Greg"  : 1,
+				"Henry" : 0,
+				"Iris"  : 5,
+				"Jane"  : 5
+			},
+			// "Iris": 
+			{
+				"Alice" : 2,
+				"Bob"   : 3,
+				"Chris" : 1,
+				"Diana" : 1,
+				"Ema"   : 1,
+				"Fred"  : 2,
+				"Greg"  : 1,
+				"Henry" : 3,
+				"Iris"  : 0,
+				"Jane"  : 5
+			},
+			// "Jane": 
+			{
+				"Alice" : 2,
+				"Bob"   : 3,
+				"Chris" : 1,
+				"Diana" : 1,
+				"Ema"   : 1,
+				"Fred"  : 2,
+				"Greg"  : 1,
+				"Henry" : 0,
+				"Iris"  : 5,
+				"Jane"  : 5
+			}
+	    ]
+	};
+	
+	// Leere <li> elemente mit &nbsp; füllen damit stylesheet greift 
+	
+	for (var i=0; i < 9; i++)	{$("#neutral ul").append("<li class="+i+" style='text-indent:-15px;'>&nbsp;</li>");}
+	for (var i=0; i < 9; i++)	{$("#kennen ul").append("<li class="+i+" style='text-indent:-10px;'>&nbsp;</li>");}
+	for (var i=0; i < 9; i++)	{$("#moegen ul").append("<li class="+i+" style='text-indent:-10px;'>&nbsp;</li>");}
+	for (var i=0; i < 9; i++)	{$("#lieben ul").append("<li class="+i+" style='text-indent:-10px;'>&nbsp;</li>");}
+	for (var i=0; i < 9; i++)	{$("#nkennen ul").append("<li class="+i+" style='text-indent:-10px;'>&nbsp;</li>");}
+	for (var i=0; i < 9; i++)	{$("#nmoegen ul").append("<li class="+i+" style='text-indent:-10px;'>&nbsp;</li>");}
+	
+	// eigentliche Befüllung der <li> elemente
+	// hätte man auch in eine Funktion schreiben können... denkfaul
+	
+	for (var i=0; i < 9; i++)
+	{
+		
+		if (leute.verbindung[i].Alice == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Alice </a>");
+		if (leute.verbindung[i].Alice == 1) $("#kennen ul ." +i).append("<span class='Alice'>Alice </span>");
+		if (leute.verbindung[i].Alice == 2)	$("#moegen ul ." +i).append("<span class='Alice'>Alice </span>");
+		if (leute.verbindung[i].Alice == 3) $("#nmoegen ul ." +i).append("<span class='Alice'>Alice </span>");
+		if (leute.verbindung[i].Alice == 4) $("#lieben ul ." +i).append("<span class='Alice'>Alice </span>");
+		if (leute.verbindung[i].Alice == 5)	$("#nkennen ul ." +i).append("<span class='Alice'>Alice </span> ");
+		
+		if (leute.verbindung[i].Bob == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Bob </a>");
+		if (leute.verbindung[i].Bob == 1) $("#kennen ul ." +i).append("<span class='Bob'>Bob </span>");
+		if (leute.verbindung[i].Bob == 2)	$("#moegen ul ." +i).append("<span class='Bob'>Bob </span>");
+		if (leute.verbindung[i].Bob == 3) $("#nmoegen ul ." +i).append("<span class='Bob'>Bob </span>");
+		if (leute.verbindung[i].Bob == 4) $("#lieben ul ." +i).append("<span class='Bob'>Bob </span>");
+		if (leute.verbindung[i].Bob == 5)	$("#nkennen ul ." +i).append("<span class='Bob'>Bob </span>");
+		
+		if (leute.verbindung[i].Chris == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Chris </a>");
+		if (leute.verbindung[i].Chris == 1) $("#kennen ul ." +i).append("<span class='Chris'>Chris </span>");
+		if (leute.verbindung[i].Chris == 2)	$("#moegen ul ." +i).append("<span class='Chris'>Chris </span>");
+		if (leute.verbindung[i].Chris == 3) $("#nmoegen ul ." +i).append("<span class='Chris'>Chris </span>");
+		if (leute.verbindung[i].Chris == 4) $("#lieben ul ." +i).append("<span class='Chris'>Chris </span>");
+		if (leute.verbindung[i].Chris == 5)	$("#nkennen ul ." +i).append("<span class='Chris'>Chris </span>");
+		
+		if (leute.verbindung[i].Diana == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Diana </a>");
+		if (leute.verbindung[i].Diana == 1) $("#kennen ul ." +i).append("<span class='Diana'>Diana </span>");
+		if (leute.verbindung[i].Diana == 2)	$("#moegen ul ." +i).append("<span class='Diana'>Diana </span>");
+		if (leute.verbindung[i].Diana == 3) $("#nmoegen ul ." +i).append("<span class='Diana'>Diana </span>");
+		if (leute.verbindung[i].Diana == 4) $("#lieben ul ." +i).append("<span class='Diana'>Diana </span>");
+		if (leute.verbindung[i].Diana == 5)	$("#nkennen ul ." +i).append("<span class='Diana'>Diana </span>");
+		
+		if (leute.verbindung[i].Ema == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Ema </a>");
+		if (leute.verbindung[i].Ema == 1) $("#kennen ul ." +i).append("<span class='Ema'>Ema </span>");
+		if (leute.verbindung[i].Ema == 2)	$("#moegen ul ." +i).append("<span class='Ema'>Ema </span>");
+		if (leute.verbindung[i].Ema == 3) $("#nmoegen ul ." +i).append("<span class='Ema'>Ema </span>");
+		if (leute.verbindung[i].Ema == 4) $("#lieben ul ." +i).append("<span class='Ema'>Ema </span>");
+		if (leute.verbindung[i].Ema == 5)	$("#nkennen ul ." +i).append("<span class='Ema'>Ema </span>");
+		
+		if (leute.verbindung[i].Fred == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Fred </a>");
+		if (leute.verbindung[i].Fred == 1) $("#kennen ul ." +i).append("<span class='Fred'>Fred </span>");
+		if (leute.verbindung[i].Fred == 2)	$("#moegen ul ." +i).append("<span class='Fred'>Fred </span>");
+		if (leute.verbindung[i].Fred == 3) $("#nmoegen ul ." +i).append("<span class='Fred'>Fred </span>");
+		if (leute.verbindung[i].Fred == 4) $("#lieben ul ." +i).append("<span class='Fred'>Fred </span>");
+		if (leute.verbindung[i].Fred == 5)	$("#nkennen ul ." +i).append("<span class='Fred'>Fred </span>");
+		
+		if (leute.verbindung[i].Greg == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Greg </a>");
+		if (leute.verbindung[i].Greg == 1) $("#kennen ul ." +i).append("<span class='Greg'>Greg </span>");
+		if (leute.verbindung[i].Greg == 2)	$("#moegen ul ." +i).append("<span class='Greg'>Greg </span>");
+		if (leute.verbindung[i].Greg == 3) $("#nmoegen ul ." +i).append("<span class='Greg'>Greg </span>");
+		if (leute.verbindung[i].Greg == 4) $("#lieben ul ." +i).append("<span class='Greg'>Greg </span>");
+		if (leute.verbindung[i].Greg == 5)	$("#nkennen ul ." +i).append("<span class='Greg'>Greg </span>");
+		
+		if (leute.verbindung[i].Henry == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Henry </a>");
+		if (leute.verbindung[i].Henry == 1) $("#kennen ul ." +i).append("<span class='Henry'>Henry </span>");
+		if (leute.verbindung[i].Henry == 2)	$("#moegen ul ." +i).append("<span class='Henry'>Henry </span>");
+		if (leute.verbindung[i].Henry == 3) $("#nmoegen ul ." +i).append("<span class='Henry'>Henry </span>");
+		if (leute.verbindung[i].Henry == 4) $("#lieben ul ." +i).append("<span class='Henry'>Henry </span>");
+		if (leute.verbindung[i].Henry == 5)	$("#nkennen ul ." +i).append("<span class='Henry'>Henry </span>");
+		
+		if (leute.verbindung[i].Iris == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Iris </a>");
+		if (leute.verbindung[i].Iris == 1) $("#kennen ul ." +i).append("<span class='Iris'>Iris </span>");
+		if (leute.verbindung[i].Iris == 2)	$("#moegen ul ." +i).append("<span class='Iris'>Iris </span>");
+		if (leute.verbindung[i].Iris == 3) $("#nmoegen ul ." +i).append("<span class='Iris'>Iris </span>");
+		if (leute.verbindung[i].Iris == 4) $("#lieben ul ." +i).append("<span class='Iris'>Iris </span>");
+		if (leute.verbindung[i].Iris == 5)	$("#nkennen ul ." +i).append("<span class='Iris'>Iris </span>");
+		
+		if (leute.verbindung[i].Jane == 0)	$("#neutral ul ." +i).append("<a class='btn' href='#'>Jane </a>");
+		if (leute.verbindung[i].Jane == 1) $("#kennen ul ." +i).append("<span class='Jane'>Jane </span>");
+		if (leute.verbindung[i].Jane == 2)	$("#moegen ul ." +i).append("<span class='Jane'>Jane </span>");
+		if (leute.verbindung[i].Jane == 3) $("#nmoegen ul ." +i).append("<span class='Jane'>Jane </span>");
+		if (leute.verbindung[i].Jane == 4) $("#lieben ul ." +i).append("<span class='Jane'>Jane </span>");
+		if (leute.verbindung[i].Jane == 5)	$("#nkennen ul ." +i).append("<span class='Jane'>Jane </span>");
+		
+	}
+	
+	</script>	
+	
+	<div id="zeichen" style="position:absolute;z-index:20;">
+		<script>
+		
+		function markAll (name) // Funktion um Namen rot zu markieren
+		{
+			$("."+name).css({"color":"#972727"});
+		}
+		
+		function unMarkAll () // Funktion um den Urzustand wieder herzustellen
+		{
+			$("#lieben span").css({"color":"#00baff"});
+			$("#moegen span").css({"color":"#45cafb"});
+			$("#kennen span").css({"color":"#b8ecff"});
+			$("#nkennen span").css({"color":"#cfcfcf"});
+			$("#nmoegen span").css({"color":"#8e8e8e"});
+						
+		}
+
+		var pathArray = new Array();
+		
+		// Funktion welche alle Positionen der Person in ein Array schreibt 
+		// durch die if abfrage werden auch die werte der buttons berücksichtig
+		// ansonsten funktioniert der pfad nicht, da nicht alle werte definiert sind
+		
+		function getPath (name)
+		{
+		
+			for (var i = 0; i<9; i++)
+			{
+				if ( $("."+i+" ."+name).length == 0 ) pathArray[i] = $("."+i+" .btn").offset();
+				else pathArray[i] = $("."+i+" ."+name).offset();
+			
+			}
+		
+		}
+	
+		// Hier wird der MousOver gezeichnet
+		
+	    $(document).ready(function(){
+			
+		var paper = Raphael(10, 50, 2000, 800);
+					
+	      $(".btn").mouseover(function(){
+			  
+  		  	paper.clear();
+  		 	
+  			  var offset = $( this ).offset(); 
+			  var htmlString = $( this ).html(); 
+			  var person = $( this ).html();
+			  
+			  htmlString = htmlString.length;
+			  
+			  
+				  var newPerson = person.substr(0, person.length-1); // Entfernung des letzten Zeichens (ist immer ein Leerzeichen, braucht ich zum Abstand halten)
+				  unMarkAll();
+				 
+			  		var ellipse = 
+					paper.ellipse((offset.left+htmlString*4), 
+					(offset.top+" "-35), 70, 60);	// Kreis um aktive Person
+									  
+					ellipse.attr({stroke: "#972727", "stroke-width":5, opacity : 0});
+					ellipse.show().animate({ opacity : 1 }, 1000); //anzeigen und einblenden des Kreises
+					
+					getPath(newPerson); 
+					
+					for(var i = 0; i<9 ; i++){ //Punkte im Pfad werden definiert
+						
+						var path = paper.path("M"+(pathArray[0].left+10)+
+						","+(pathArray[0].top+" "-30)+"L"+pathArray[1].left+
+						","+pathArray[1].top+" "+"L"+pathArray[2].left+","+pathArray[2].top+" "+
+						"L"+pathArray[3].left+","+pathArray[3].top+" "+"L"+pathArray[4].left+
+						","+pathArray[4].top+" "+"L"+pathArray[5].left+","+pathArray[5].top+" "+
+						"L"+pathArray[6].left+","+pathArray[6].top+" "+"L"+pathArray[7].left+
+						","+pathArray[7].top+" "+"L"+pathArray[8].left+","+pathArray[8].top+" ");
+					}
+					
+					path.attr({stroke: "#972727", "stroke-width":5, opacity : 0 }); 
+					path.show().animate({ opacity : 1 }, 1000);
+					
+					markAll(newPerson);
+
+	      });
+	
+
+	    });
+		
+		
+		</script>
+	</div>
+	
+</body>
+
+</html>

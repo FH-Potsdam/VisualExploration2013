@@ -1,0 +1,72 @@
+	  body {
+		  background-color:#2b2b2b;
+		  font-family: 'Cutive Mono', serif;}
+		  
+	  ul {
+		  list-style-type:none;
+		  width:2000px;
+		  margin:0;
+		  padding-top:25px;}
+		  
+	  li {
+		  display:block;
+		  float:left;
+		  width:100px;
+		  padding-right:100px;}
+		  
+	  a {
+		  color:#fff;
+		  text-decoration:none;}
+  
+	  #lieben{
+		  height:80px;
+		  width:2000px;
+		  border-bottom:3px dashed #222;
+		  color:#00baff;
+		  background-image:url(liebt.png);
+		  background-repeat:no-repeat;
+		  background-position:bottom left;}
+		  
+	  #moegen{
+		  height:100px;
+		  width:2000px;
+		  border-bottom:3px dashed #222;
+		  color:#45cafb;
+		  background-image:url(mag.png);
+		  background-repeat:no-repeat;
+		  background-position:bottom left;}
+		  
+	  #kennen{
+		  height:130px;
+		  width:2000px;
+		  border-bottom:3px dashed #222;
+		  color:#b8ecff;
+		  background-image:url(kennt.png);
+		  background-repeat:no-repeat;
+		  background-position:bottom left;}
+		  
+	  #neutral{
+		  height:80px;
+		  width:2000px;
+		  color:#fff;
+		  border-bottom:3px dashed #222;
+		  color:#fff;
+		  font-size:25px}
+		  
+	  #nkennen{
+		  height:120px;
+		  width:2000px;
+		  border-bottom:3px dashed #222;
+		  color:#cfcfcf;
+		  background-image:url(kenntnicht.png);
+		  background-repeat:no-repeat;
+		  background-position:bottom left;}
+		  
+	  #nmoegen{
+		  height:100px;
+		  width:2000px;
+		  border-bottom:3px dashed #222;
+		  color:#8e8e8e;
+		  background-image:url(magnicht.png);
+		  background-repeat:no-repeat;
+		  background-position:bottom left;}
