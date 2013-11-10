@@ -1,0 +1,627 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"perso",
+				"person2"
+			],
+			[
+				"name",
+				"names"
+			],
+			[
+				"for",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"kr",
+				"karma2"
+			],
+			[
+				"min",
+				"minOut"
+			],
+			[
+				"to",
+				"toFixed"
+			],
+			[
+				"val",
+				"value"
+			],
+			[
+				"if",
+				"ife	if … else"
+			],
+			[
+				"f",
+				"f	Anonymous Function"
+			],
+			[
+				"per",
+				"person2"
+			],
+			[
+				"pers",
+				"person1"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"data",
+				"dataLoaded"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"fo",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"path",
+				"pathString"
+			],
+			[
+				"pt",
+				"pathString"
+			],
+			[
+				"pat",
+				"pathString"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"ang",
+				"angle"
+			],
+			[
+				"pla",
+				"played_angle"
+			],
+			[
+				"cur",
+				"currentAngle"
+			],
+			[
+				"current",
+				"currentAngle"
+			],
+			[
+				"se",
+				"sessionCourse"
+			],
+			[
+				"addData_c",
+				"addData_Course"
+			],
+			[
+				"de",
+				"decimal"
+			],
+			[
+				"totalV",
+				"totalValidGoalHit"
+			],
+			[
+				"total",
+				"totalGoals"
+			],
+			[
+				"goal",
+				"goal_hit"
+			],
+			[
+				"goa",
+				"goal_hit"
+			],
+			[
+				"va",
+				"valid_goal_hit"
+			],
+			[
+				"update",
+				"updateMarker"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"Des",
+				"DestinationPort"
+			],
+			[
+				"des",
+				"destinationPort"
+			],
+			[
+				"che",
+				"checkTimestamp"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"div",
+				"div#console"
+			],
+			[
+				"totalS",
+				"totalSpeedLeft"
+			],
+			[
+				"spee",
+				"speed_right"
+			],
+			[
+				"totalD",
+				"totalShotDelay"
+			],
+			[
+				"speed",
+				"speed_left"
+			],
+			[
+				"totalG",
+				"totalGoals"
+			],
+			[
+				"tot",
+				"total"
+			],
+			[
+				"pl",
+				"placeholder"
+			],
+			[
+				"goal_",
+				"goal_actual"
+			],
+			[
+				"shot",
+				"shot_delay"
+			],
+			[
+				"parse",
+				"parseInt"
+			],
+			[
+				"neigh",
+				"neighbourL"
+			],
+			[
+				"nei",
+				"neighbourH"
+			],
+			[
+				"tota",
+				"totalShotsLow"
+			],
+			[
+				"add",
+				"addData_TotalShotsLevel"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"rgb",
+				"rgba"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"mi",
+				"middle"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"ne",
+				"neighbourH"
+			],
+			[
+				"totalGoal",
+				"totalGoalHit"
+			],
+			[
+				"cal",
+				"calc_Norm"
+			],
+			[
+				"getDa",
+				"getData_ShotsPerLevel"
+			],
+			[
+				"n",
+				"name"
+			],
+			[
+				"print",
+				"printData_ShotsPerPlayer"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"curr",
+				"currentDuration"
+			],
+			[
+				"d",
+				"document"
+			],
+			[
+				"com",
+				"combinedPercent"
+			],
+			[
+				"g",
+				"goals"
+			],
+			[
+				"Play",
+				"PlayerList"
+			],
+			[
+				"le",
+				"length"
+			],
+			[
+				"link",
+				"linkNummer"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"di",
+				"display"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 49.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 462.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Localhost/fhp/relationship/js/main.js",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Localhost/fhp/relationship/data/network.json",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Localhost/fhp/relationship/index.html",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Localhost/fhp/relationship/js/ajax.js",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Master/Visuelle Informationsexploration/Hausaufgaben/13-11-05 Network/network_raw_kim.json",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Localhost/fhp/relationship/css/main.css",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Localhost/fhp/relationship/js/data.js",
+		"/Volumes/Mac HDD/Users/Jonas/Desktop/snap/js/main.js",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Localhost/gsg/Footbonaut/js/data.js",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Localhost/gsg/Footbonaut/css/main.css",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Localhost/fhp/pattern-01/data/log-json.csv",
+		"/Volumes/Mac HDD/Users/Jonas/Desktop/svgjs/index.html",
+		"/Volumes/Privat/Macbook FileVault/Key.pages",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/HTDocs/EwigeTabelle/js/main.js",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/HTDocs/EwigeTabelle/test.html",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/HTDocs/EwigeTabelle/data/eT.json",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/HTDocs/EwigeTabelle/index.html",
+		"/var/folders/g4/l1_qdh991vv_hh4bll3m1f440000gn/T/sublime-sftp-browse-1381784183/jonasparnow.de/jp/mail/index.html",
+		"/Volumes/Mac HDD/Users/Jonas/Library/Application Support/Sublime Text 2/Packages/User/sftp_servers/jonasparnow.de",
+		"/Volumes/Mac HDD/Users/Jonas/Desktop/Ewige Tabelle/eT.json",
+		"/Volumes/Mac HDD/Users/Jonas/Downloads/Golden-Grid-System-master/Golden-Grid-System-master/GGS.html",
+		"/Volumes/Mac HDD/Users/Jonas/Downloads/Golden-Grid-System-master/Golden-Grid-System-master/GGS.css",
+		"/mach_kernel",
+		"/Volumes/Mac HDD/Users/Jonas/Desktop/Kreise",
+		"/Volumes/Mac HDD/Users/Jonas/Documents/Processing/Tweetable Code/KreisVariationen/Kreise.java",
+		"/Volumes/Mac HDD/Users/Jonas/Downloads/Golden-Grid-System-master/Golden-Grid-System-master/GGS.js",
+		"/Volumes/Mac HDD/Users/Jonas/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Volumes/Mac HDD/Users/Jonas/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Volumes/Mac HDD/Users/Jonas/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Volumes/Mac HDD/Users/Jonas/Desktop/Skat Übersetzung",
+		"/Volumes/Mac HDD/Users/Jonas/Library/Caches/TemporaryItems/en_US.po"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"sessionCourse",
+			"new",
+			"object",
+			"map",
+			"remap",
+			"i",
+			"40",
+			"10",
+			"%",
+			"done = true;",
+			"totalValidGoalHitHigh",
+			"display",
+			"addData_TotalDataLevel",
+			"updateData_TotalData",
+			"addData_TotalDataLevel",
+			"level",
+			"totalGoalHit",
+			"totalGoals",
+			"totalGoalHit",
+			"totalValidGoals",
+			"addData_TotalValidGoalHit",
+			"addData_TotalGoalHit",
+			"testData_ValidHits",
+			"100",
+			"rect",
+			"Destination Port",
+			"addData",
+			"updatePage_TotalPercent",
+			"updateData_TotalData",
+			"rgba",
+			"rgb",
+			"updateData_PercentPerNeighbour",
+			"error!",
+			"error",
+			"error!",
+			"getData_ScoreTotal",
+			"updatePage_TotalPercent",
+			"ballmac",
+			"sort",
+			".toFixed(2));",
+			".toFixed(2)",
+			" + ')'",
+			").",
+			"totalShotsHeigh",
+			"neighbourH",
+			"totalShots",
+			"addData_TotalShotsLevel",
+			"updateData_TotalData",
+			"totalShots",
+			"'h'",
+			" + '<",
+			"100",
+			" + '<",
+			"'h'",
+			"h",
+			"o",
+			"neighbourH",
+			"goal_hit",
+			"actual",
+			"neighbourH",
+			"'l'",
+			"neighbourH",
+			"'h'",
+			"h",
+			"unten",
+			"'l'",
+			"'h'",
+			"h",
+			"getData_PerAngles",
+			"angles[goalNumber][goalHeight]",
+			"updateData_TotalPercent",
+			"getData_PercentPerAngles",
+			"Shoots",
+			"shoots",
+			"Goals",
+			"goals",
+			"Goals",
+			"goals",
+			"Goals",
+			"goals",
+			"0",
+			"goal",
+			"total",
+			"value.RECORDS[i]",
+			"resp",
+			"verein",
+			"bayern",
+			"tabPoint",
+			"division",
+			"nbPoint",
+			"rayon",
+			"division",
+			"nbPoint",
+			"toUnicode",
+			"unicodeString",
+			"theString"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"totalGoalHit",
+			"DestinationPort",
+			"updateData_TotalData",
+			"getData_PerAngles",
+			"Shots",
+			"shots",
+			"vector",
+			"i",
+			"anzahl",
+			"size",
+			"i",
+			"anzahlPunkte"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.sftp":
+	{
+		"height": 102.0
+	},
+	"replace":
+	{
+		"height": 66.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"mainj",
+				"/Volumes/Mac HDD/Users/Jonas/Desktop/mail/js/main.js"
+			],
+			[
+				"inde",
+				"/Volumes/Mac HDD/Users/Jonas/Desktop/mail/index.html"
+			],
+			[
+				"mai",
+				"/Volumes/Mac HDD/Users/Jonas/Desktop/mail/css/main.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 159.0,
+	"status_bar_visible": true
+}
