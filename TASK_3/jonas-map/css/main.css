@@ -1,0 +1,34 @@
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+body {
+    font-size: 1em;
+    line-height: 1.4;
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+svg {
+	position: absolute;
+	top: 0;
+	height: 400px;
+	background: url('../images/map-01.png');
+}
+
+div#gallery {
+	margin-top: 400px;
+}
