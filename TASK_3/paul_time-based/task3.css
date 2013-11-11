@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+
+ hmtl, body {
+    background-color:#3c3c3c;
+    padding:1em;
+    font-family:"Lato", sans-serif;
+    font-weight:200;
+    font-size:1em;
+    margin:0px;
+          
+    }
+            
+    .main-container {
+    width: 100%;
+    margin-left:auto;
+    margin-right:auto;
+                
+    }
+            
+    .slider-container {
+            width:100%;
+            height:2em;
+            background-color:#000;
+            color: #fff;
+            float:left;
+            line-height:2em;
+           
+            -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+    }
+            
+    .slider-container .time-left {
+    text-align: left;
+    width:33%;            
+    float:left;
+    padding-left:1%;
+    }
+            
+    .slider-container .time-center {
+    text-align: center;
+    float:left;
+    width:31%; 
+                
+    
+    }
+            
+    .slider-container .time-right {
+    text-align: right;
+    float:left;
+    width:33%; 
+    padding-right:1%;
+    
+    }
+            
+    .slider {
+            
+    z-index:100;
+    position:absolute;
+    background-color:#555;
+    width:10%;
+    text-align:center;
+    cursor:pointer;
+    border-left-style:solid;
+    border-left-color:#fff;
+	    
+    }
+            
+    img {
+            
+            cursor:pointer;
+            margin-right:1em;
+            margin-top:1em;
+    }
+    
+    .flickrfile img{
+    
+              
+            }
+        
+    img.pic:hover {
+    
+         opacity:0.8;
+             
+            
+    }
+            
+    .details-container{
+    
+            width:100%; 
+             background-color:#000;
+             margin-top:1em;
+            float:right;
+                
+            
+    }
+            
+   .details-pic {
+     color:#fff;
+    margin:1em;
+   }
+            
+    .details-titel {
+     color:#fff;
+    margin:1em;
+   }
+   
+    .details-pic img {
+            width:100%;
+            
+            }
+    
+    .flickrfile {
+            width:100%;
+            
+            }
+            
+        .close a{
+            float:right;
+            color:#fff; 
+            text-decoration:none;
+            }
+            
+    .details-text {
+            
+            color:#fff;
+            margin:1em;
+            }
