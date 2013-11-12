@@ -1,0 +1,62 @@
+* {
+	margin: 0;
+	padding:0;
+	font-family: "Dosis", sans-serif;
+}
+
+div.info {
+	position: absolute;
+	top:20px;
+	right:20px;
+	text-align: center;
+}
+
+div.info p {
+	display:inline;
+	border-radius: 5px;
+	color:#fff;
+	font-weight: bold;
+	padding:5px;
+	margin-left: 10px;
+}
+
+p.bg {
+
+}
+
+body {
+	background-color:#fbf9f1;
+}
+
+div.person {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 40;
+}
+
+div.person-image {
+	padding-top:430px;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 200;
+	width: 100px;
+	height: 100px;
+	background-repeat: no-repeat;
+	position: absolute;
+	z-index: 30;
+}
+
+
+div#container svg {
+	z-index: 20;
+}
+
+.rounded-barchart {
+	z-index: 10;
+	width:100px;
+	height:10px;
+	position:absolute;
+	background-image: url("./images/arrow2.png");
+	background-repeat: repeat-y;
+}
