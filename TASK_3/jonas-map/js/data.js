@@ -16,6 +16,8 @@ function drawElement(element, index, array) {
 
     	s.circle(map(longitude,'long'), map(latitude,'lat'), 5).attr({
     	    fill: Snap.rgb(element.color_avg[0],element.color_avg[1],element.color_avg[2])
-    	});
+    	})
+        .data('url', element.url_q)
+        .hover(function() { console.log(this.data('url'))});
     }
 }

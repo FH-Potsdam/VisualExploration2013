@@ -18,6 +18,7 @@ $(document).mousedown(function() {
     auswahl.attr( { x: event.pageX, y: event.pageY, width: 1, height: 1 } );
 }).bind('mousemove', function() {
 	(event.which == 1) ? drawAuswahl(event) : '';
+	(event.which == 1) ? displayPictures(remap(auswahl.attr('x'),'long'), remap(auswahl.attr('y'),'lat'), remap(event.pageX,'long'), remap(event.pageY,'lat')) : '';
 })
 .bind('mouseup mouseleave', function() {
     drawAuswahl(event);
@@ -52,7 +53,6 @@ function displayPictures (x, y, width, height) {
 		html: items.join( '' )
 	}));
 }
-
 
 function map (value, dimension) {
 	var dimension = dimension  || 'lat';
