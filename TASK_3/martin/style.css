@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body{
+font-family: Verdana;
+color: #777;
+}
+
+
+#main{
+	margin-top: 5px;
+	margin-left: 5px;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/*** BEGIN TEMPORARY STYLES***/
+.border{
+border: dotted thin #333;
+}
+/*** END TEMPORARY STYLES***/
+
+#myTitles{
+	width: 75%;
+	float: left;
+}
+
+canvas{
+	/*background: url(images/plattkarte_weiss.jpg);*/
+	float: left;
+	width: 20%;
+	height: auto;
+	margin-left: 10px
+
+}
+
+#myPhoto{
+	width: 20%;
+	height: 150px;
+	float: left;
+	margin-left: 10px;
+	margin-top: 10px;
+	background: url(images/flickr/10644307066_51c2d7c6ae_q.jpg);
+	background-repeat: no-repeat;
+
+}
+
+.mySpan{
+
+}
+
+.mySpan:hover{
+	color: #000;
+}
