@@ -1,0 +1,122 @@
+{
+  "Jane" : {
+    "Jane" : 0,
+    "Fred" : 2,
+    "Diana" : 1,
+    "Bob" : 3,
+    "Chris" : 1,
+    "Alice" : 2,
+    "Ema" : 1,
+    "Henry" : 5,
+    "Iris" : 5,
+    "Greg" : 1
+  },
+  "Fred" : {
+    "Jane" : 1,
+    "Fred" : 0,
+    "Diana" : 1,
+    "Bob" : 4,
+    "Chris" : 1,
+    "Alice" : 1,
+    "Ema" : 1,
+    "Henry" : 2,
+    "Iris" : 5,
+    "Greg" : 2
+  },
+  "Diana" : {
+    "Jane" : 2,
+    "Fred" : 2,
+    "Diana" : 0,
+    "Bob" : 2,
+    "Chris" : 1,
+    "Alice" : 2,
+    "Ema" : 5,
+    "Henry" : 2,
+    "Iris" : 2,
+    "Greg" : 2
+  },
+  "Bob" : {
+    "Jane" : 2,
+    "Fred" : 4,
+    "Diana" : 1,
+    "Bob" : 0,
+    "Chris" : 1,
+    "Alice" : 2,
+    "Ema" : 1,
+    "Henry" : 3,
+    "Iris" : 1,
+    "Greg" : 1
+  },
+  "Chris" : {
+    "Jane" : 2,
+    "Fred" : 2,
+    "Diana" : 1,
+    "Bob" : 2,
+    "Chris" : 0,
+    "Alice" : 2,
+    "Ema" : 5,
+    "Henry" : 2,
+    "Iris" : 2,
+    "Greg" : 2
+  },
+  "Alice" : {
+    "Jane" : 1,
+    "Fred" : 3,
+    "Diana" : 2,
+    "Bob" : 1,
+    "Chris" : 2,
+    "Alice" : 0,
+    "Ema" : 5,
+    "Henry" : 4,
+    "Iris" : 1,
+    "Greg" : 5
+  },
+  "Ema" : {
+    "Jane" : 1,
+    "Fred" : 2,
+    "Diana" : 5,
+    "Bob" : 1,
+    "Chris" : 5,
+    "Alice" : 5,
+    "Ema" : 0,
+    "Henry" : 1,
+    "Iris" : 3,
+    "Greg" : 2
+  },
+  "Henry" : {
+    "Jane" : 5,
+    "Fred" : 2,
+    "Diana" : 1,
+    "Bob" : 3,
+    "Chris" : 1,
+    "Alice" : 2,
+    "Ema" : 1,
+    "Henry" : 0,
+    "Iris" : 5,
+    "Greg" : 1
+  },
+  "Iris" : {
+    "Jane" : 5,
+    "Fred" : 2,
+    "Diana" : 1,
+    "Bob" : 3,
+    "Chris" : 1,
+    "Alice" : 2,
+    "Ema" : 1,
+    "Henry" : 5,
+    "Iris" : 0,
+    "Greg" : 1
+  },
+  "Greg" : {
+    "Jane" : 1,
+    "Fred" : 1,
+    "Diana" : 2,
+    "Bob" : 1,
+    "Chris" : 2,
+    "Alice" : 5,
+    "Ema" : 3,
+    "Henry" : 1,
+    "Iris" : 3,
+    "Greg" : 0
+  }
+}
