@@ -1,14 +1,14 @@
 jQuery(document).ready(function($) {
 	$.getJSON( "../data/flickr_final.json", function( data ) {
+    var count = 0;
 		$.each( data.photos, function( key, val ) {
       functions.clean_tag(val);
 	  });
     functions.data = data.photos;
     
-		_.each( data.photos, function( item ) {
-      functions.connections.push({"name":item.id+"-date","id":item.id,"color":item.color_avg,"url":item.url_q,"type":"date","size":1,"imports":functions.search_date(item.dateupload)});
-      functions.connections.push({"name":item.id+"-tag","id":item.id,"color":item.color_avg,"url":item.url_q,"type":"tag","size":1,"imports":functions.search_tag(item.tags)});
-      functions.connections.push({"name":item.id+"-color","id":item.id,"color":item.color_avg,"url":item.url_q,"type":"color","size":1,"imports":functions.search_color(item.color_avg)});
+		_.each( data.photos, function( item, index ) { functions.connections.push({"name":item.id+"-date","id":item.id,"color":item.color_avg,"url":item.url_q,"type":"date","size":1,"imports":functions.search_date(item.dateupload, count)});
+      functions.connections.push({"name":item.id+"-tag","id":item.id,"color":item.color_avg,"url":item.url_q,"type":"tag","size":1,"imports":functions.search_tag(item.tags, count)});
+      functions.connections.push({"name":item.id+"-color","id":item.id,"color":item.color_avg,"url":item.url_q,"type":"color","size":1,"imports":functions.search_color(item.color_avg, count)});
 	  });
     functions.draw();
 
@@ -27,17 +27,17 @@ functions = {
     val.tags = _.without(val.tags.split(" "), "");    
     return val;
   },
-  search_date : function(date) {
+  search_date : function(date, count) {
     items = _.filter(this.data, function(item) {return date <= parseInt(item.dateupload)+parseInt(30) && date >= parseInt(item.dateupload)-parseInt(30) });
     return _.map(items, function(item) { return item.id+"-date" });
   },
   
-  search_tag: function(tags) {
+  search_tag: function(tags, count) {
     self = this;
     items = _.filter(this.data, function(item) { return _.some(item.tags, function(tag) { if(_.contains(tags, tag) == true) { return tag;} }) });
     return _.map(items, function(item) { return item.id+"-tag" });
   },
-  search_color: function(color_avg) {
+  search_color: function(color_avg, count) {
     self = this;
     items = _.filter(this.data, function(item) { return self.com_color(color_avg, item) });
     return _.map(items, function(item) { return item.id+"-color" });
@@ -45,6 +45,7 @@ functions = {
   
 
   com_color : function(color_avg, item) {
+   
     var color_diff = [];
     var diff = 0;
     for(i = 0; i < 3; i++) {
@@ -202,12 +203,13 @@ functions = {
     
     var nodes = cluster.nodes(packages.root(this.connections)),
         links = packages.imports(nodes);
+        splines = bundle(links);
 
     svg.selectAll(".link")
         .data(bundle(links))
       .enter().append("path")
         .attr("class", function(d) { return "link link-"+d[0].type+" id-"+d[0].id})
-        .attr("d", line);
+        .attr("d", function(d, i) { return line(splines[i]) });
 
     svg.selectAll(".node")
         .data(nodes.filter(function(n) { return !n.children; }))
