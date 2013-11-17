@@ -1,4 +1,4 @@
-url = "data/liebe.json";
+url = "data/ccc.json";
 var tweets;
 
 // Assign handlers immediately after making the request,
