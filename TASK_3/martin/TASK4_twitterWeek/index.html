@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Allday Tweetin'</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script src="scripts/artisan.js"></script>
+	<script type="text/javascript" src="scripts/script.js"></script>
+	
+	<link rel="stylesheet" href="style.css">
+	
+</head>
+
+<body>
+<h1 style="margin-bottom: 20px">Weekend tweets about weekdays</h1>
+<p class="comment">Tweets about</p>
+<div style="padding:0px">
+	<hr/>
+	<div id="mon_btn" class="day_btn highlight" style="margin-left:0px"> »Monday« </div>
+	<div id="tue_btn" class="day_btn"> &raquo;Tuesday« </div>
+	<div id="wed_btn" class="day_btn"> »Wednesday« </div>
+	<div id="thu_btn" class="day_btn"> »Thursday« </div>
+	<div id="fri_btn" class="day_btn"> »Friday« </div>
+	<div id="sat_btn" class="day_btn"> »Saturday« </div>
+	<div id="sun_btn" class="day_btn"> »Sunday« </div>
+	<hr/>
+</div>
+<p class="comment"> </p><div style="float:left, padding:0px">
+	<div id="fri_tweet_container" class="tweet_container">
+		<p class='day_of_aquiring'>@Friday</p>
+		<div class="random_tweet">I'm going to try and dress up really pretty Monday, but I doubt that's gonna happen...</div>
+		
+		<hr></hr><div class="tweet" data-query="Mon" data-day="Fri">I can't wait on Monday because of @backstreetboys …</div>
+		<hr></hr><div class="tweet" data-query="Mon" data-day="Fri">$yelp at trendline resistance.  This afternoon and…</div>
+		<hr></hr><div class="tweet" data-query="Mon" data-day="Fri">Working Monday-Sunday this week and then straight …</div>
+
+	</div>
+
+	<div id="sat_tweet_container" class="tweet_container">
+		<p class='day_of_aquiring'>@Saturday</p>
+		<div class="random_tweet">I want it to be monday already</div>
+		
+		<hr></hr><div class="tweet" data-query="Mon" data-day="Sat">RT @BulletsGP: #RaisingHell  THE NEW SONG BY @bfmv…</div>
+		<hr></hr><div class="tweet" data-query="Mon" data-day="Sat">RT @run4itonline: RT TO WIN a pair of Seal Skinz! …</div>
+		<hr></hr><div class="tweet" data-query="Mon" data-day="Sat">RT @youmeatsix: Weekend off. Newcastle on Monday! …</div>
+	</div>
+
+	<div id="sun_tweet_container" class="tweet_container">
+		<p class='day_of_aquiring'>@Sunday</p>
+		<div class="random_tweet">Slowly starting to sink in that it's Monday tomorrow 😶🔫</div>
+		<hr></hr><div class="tweet" data-query="Mon" data-day="Sun">Rutinitasnya sii sma..tp semangatnya harus tetep s…</div>
+		<hr></hr><div class="tweet" data-query="Mon" data-day="Sun">I'm staying after school Monday , Tuesday , and We…</div>
+		<hr></hr><div class="tweet" data-query="Mon" data-day="Sun">Fuck no its Monday... Where is my tgif??? Sigh</div>	
+	</div>
+	<div id="mon_tweet_container" class="tweet_container">
+		<p class='day_of_aquiring'>@Monday</p>
+		<div class="random_tweet">Its only Monday! #blah #hurryupweekend</div>
+		<div class="tweet" data-query="Mon" data-day="Mon">RT @Whataburger: The only thing that can cure my M…</div><hr></hr>
+		<div class="tweet" data-query="Mon" data-day="Mon">@StellaLibretto @eMarketer Yes, they're rare. And …</div><hr></hr>
+		<div class="tweet" data-query="Mon" data-day="Mon">RT @_dontgiveafck: All the white girls will be "be…</div>
+	</div>
+</div>
+
+<div id="main" class="border">
+</div>
+
+<script type="text/javascript">
+/*** ### FRIDAY CONTAINER ### ***/
+
+//function fillWithTweets(btn_id, fri_arr){
+
+	function fillWithTweets(day_btn_id, arr_fri, arr_sat, arr_sun, arr_mon){
+
+		$(day_btn_id).click( function() {
+			$('.day_btn').removeClass('highlight');
+			$('.tweet_container').empty(); //remove all tweets from every "tweet_container"-div
+
+			/** Set Headline in most ugly way **/
+			$(fri_tweet_container).append("<p class='day_of_aquiring'>@Friday</p>");				
+			$(sat_tweet_container).append("<p class='day_of_aquiring'>@Saturday</p>");
+			$(sun_tweet_container).append("<p class='day_of_aquiring'>@Sunday</p>");
+			$(mon_tweet_container).append("<p class='day_of_aquiring'>@Monday</p>");
+			
+			var randomNumber = Math.floor(Math.random() * 99);
+			$(fri_tweet_container).append("<div class='random_tweet'>"+arr_fri[randomNumber]+"</div>");
+			$(sat_tweet_container).append("<div class='random_tweet'>"+arr_sat[randomNumber]+"</div>");
+			$(sun_tweet_container).append("<div class='random_tweet'>"+arr_sun[randomNumber]+"</div>");
+			$(mon_tweet_container).append("<div class='random_tweet'>"+arr_mon[randomNumber]+"</div>");
+
+
+
+			$(day_btn_id).addClass('highlight');
+
+			for(var i = 0; i<arr_fri.length; i++){
+				$(fri_tweet_container).append("<hr/>"+arr_fri[i]);			
+			}
+
+			for(var i = 0; i<arr_sat.length; i++){
+				$(sat_tweet_container).append("<hr/>"+arr_sat[i]);			
+			}
+
+			for(var i = 0; i<arr_sun.length; i++){
+				$(sun_tweet_container).append("<hr/>"+arr_sun[i]);			
+			}
+
+			for(var i = 0; i<arr_mon.length; i++){
+				$(mon_tweet_container).append("<hr/>"+arr_mon[i]);			
+			}
+
+		});
+	}
+
+
+	fillWithTweets('#mon_btn', Fri_Mon_Arr, Sat_Mon_Arr, Sun_Mon_Arr, Mon_Mon_Arr);	
+	fillWithTweets('#tue_btn', Fri_Tue_Arr, Sat_Tue_Arr, Sun_Tue_Arr, Mon_Tue_Arr);	
+	fillWithTweets('#wed_btn', Fri_Wed_Arr, Sat_Wed_Arr, Sun_Wed_Arr, Mon_Wed_Arr);	
+	fillWithTweets('#thu_btn', Fri_Thu_Arr, Sat_Thu_Arr, Sun_Thu_Arr, Mon_Thu_Arr);	
+	fillWithTweets('#fri_btn', Fri_Fri_Arr, Sat_Fri_Arr, Sun_Fri_Arr, Mon_Fri_Arr);
+	fillWithTweets('#sat_btn', Fri_Sat_Arr, Sat_Sat_Arr, Sun_Sat_Arr, Mon_Sat_Arr);
+	fillWithTweets('#sun_btn', Fri_Sun_Arr, Sat_Sun_Arr, Sun_Sun_Arr, Mon_Sun_Arr);	
+
+/*	$('#mon_btn').click( function() {
+		$('.tweet_container').empty(); //remove all tweets from every "tweet_container"-div
+		
+		for(var i = 0; i<Fri_Mon_Arr.length; i++){
+			$(fri_tweet_container).append(Fri_Mon_Arr[i]);			
+		}
+
+		for(var i = 0; i<Sat_Mon_Arr.length; i++){
+			$(sat_tweet_container).append(Sat_Mon_Arr[i]);			
+		}
+	} 
+	);
+*/
+
+//
+
+//fillWithTweets('#mon_btn','#fri_tweet_container', Fri_Mon_Arr);
+//fillWithTweets('#tue_btn','#fri_tweet_container', Fri_Tue_Arr);
+
+
+
+
+	/*** CLICK ON MONDAY ***/
+/*		$('#mon_btn').click( function() {
+			for(var i = 0; i<Fri_Mon_Arr.length; i++){
+				$('#fri_tweet_container').empty();
+				$('#fri_tweet_container').append(Fri_Mon_Arr[i]);			
+			}
+		} );
+
+	/*** CLICK ON MONDAY ***/
+/*			for(var i = 0; i<Fri_Tue_Arr.length; i++){
+				$('#fri_tweet_container').empty();
+				$('#fri_tweet_container').append(Fri_Tue_Arr[i]);			
+			}
+		} );
+*/
+
+</script>
+
+</body>
+
+</html>

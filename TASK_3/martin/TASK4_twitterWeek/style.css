@@ -1,0 +1,80 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body{
+font-family: Verdana;
+color: #333;
+font-size: 12px;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight: normal;
+	color: #444;
+}
+
+/*** BEGIN TEMPORARY STYLES***/
+.border{
+	border: solid thin #FFF;
+}
+/*** END TEMPORARY STYLES***/
+
+.tweet{
+	margin-bottom: 0px;
+}
+
+.day_btn{
+	display: inline;
+	font-weight: bold;
+	margin-right: 20px;
+	color: #999;
+}
+
+.tweet_container{
+	width: 23%;
+	height: auto;
+	float: left;
+	padding: 0px;
+	margin-top: 0px;
+	margin-right: 15px;
+	margin-left: 0px;
+}
+
+.day_of_aquiring{
+	font-weight: bold;
+	padding: 0px;
+	color: #000;
+}
+
+#fri_tweet_container{
+	margin-left: 0px;
+}
+
+#main{
+	display: block;;
+}
+
+.highlight{
+	color: #000;
+}
+
+.random_tweet{
+	height: 95px;
+	font-size: 16px !important;
+	font-weight: normal;
+	border: solid thin #FFF;
+
+}
+
+.comment{
+	margin-top:20px;
+	margin-bottom:3px;
+	color: #999;
+	font-style: italic;
+	font-size: 10px;
+}
+
+hr{
+	border: solid thinner #CCC;
+}
