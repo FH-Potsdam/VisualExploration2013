@@ -35,7 +35,7 @@
                     d.close = +d.close;
                     });
 
-                var svg = d3.select("body").append("svg")
+                var svg = d3.select("#schmidt").append("svg")
                     .attr("width", width)
                     .attr("height", height)
 
