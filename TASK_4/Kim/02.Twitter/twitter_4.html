@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Twitter Timeline</title>
+        <script type="text/javascript" src="js/d3.js"></script>
+        
+
+        <style type="text/css">
+
+        body {background-color:#fff;}
+
+            .axis path {
+                fill: none;
+                }
+
+            .axis line {
+                fill: none;
+                stroke: black;
+                stroke-width: 1;
+                stroke-opacity: 0.1;
+                shape-rendering: crispEdges;
+                }
+            
+            .axis text {
+                font-family: sans-serif;
+                font-size: 9px;
+                fill: gray;
+                }
+
+
+
+        </style>
+
+    </head>
+    <body>
+       
+
+
+        <script type="text/javascript">
+
+        var width = 1000,
+            height = 500,
+            padding = 20;
+
+        d3.json("data/kimay_timeline_200.json", function (data) { 
+
+                var timeformat = d3.time.format("%a %b %d %H:%M:%S %Z %Y").parse;
+
+                var timeScale = d3.time.scale()
+                    .domain([new Date(data[0].created_at), d3.time.day.offset(new Date(data[data.length - 1].created_at), 1)])
+                    .range([padding, width-padding]);
+
+                var xAxis = d3.svg.axis()
+                    .scale(timeScale)
+                    .orient('bottom')
+                    .ticks(d3.time.years)
+                    .tickFormat(d3.time.format('%Y'))
+                    .tickSize(450)
+                    ;
+                
+                data.forEach(function(d) {
+                    d.date = timeformat(d.created_at);
+                    d.close = +d.close;
+                    });
+
+                var svg = d3.select("body").append("svg")
+                    .attr("width", width)
+                    .attr("height", height)
+
+                svg.selectAll("circle")
+                    .data(data)
+                    .enter()
+                        .append("circle")
+                        .attr("r", function (d){return d.retweet_count/4 + 3;})
+                        // .attr("width", 2)
+                        .attr("cx", function (d){ return timeScale(new Date(d.created_at));})
+                        .attr("cy", function (d){return d.retweet_count+ 20;})
+                        .style("stroke", function (d){
+                            if(d.retweeted === true) {return "3DBC7C"}
+                            else {return "FBAA1C"}
+                            ;})
+                        .style("fill-opacity", 0)
+                        .append("title")
+                        .text(function(d){return "Tweet:" + " " + d.text + " | " +  "Date:" + " " + d.created_at;});
+
+                svg.append("g")
+                    .attr("class", "axis")
+                    .call(xAxis);
+        });
+        
+
+        </script>
+    </body>
+</html>
