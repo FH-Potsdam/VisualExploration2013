@@ -31,7 +31,7 @@ jQuery(document).ready(function($) {
         cancel: "a.ui-icon", // clicking an icon won't initiate dragging
         revert: "invalid", // when not dropped, the item will revert back to its initial position
         containment: "document",
-        zIndex: 100,
+        zIndex: 999,
         cursor: "move"
       });
     

@@ -67,7 +67,6 @@ html,body {
   background: rgba(220,220,220,1);
   margin: 5px;
   padding: 5px;
-  z-index: 999;
 }
 
 .tweet-name {
@@ -117,7 +116,6 @@ html,body {
   background: #333;
   height: 100%;
   width: 100%;
-  z-index: 2;
 }
 
 #compare .filter {
@@ -147,12 +145,12 @@ html,body {
 /* ############################################### */
 
 #trash-container {
-  position: fixed;
+  position: absolute;
   left: -270px;
   top: 0px;
   width: 370px;
   height: 100%;
-  z-index: 1;
+  z-index: 10;
 }
 
 #trash {
@@ -165,7 +163,7 @@ html,body {
   z-index: 3;
   overflow: none;
   overflow-y: auto;
-  z-index: 2;
+  z-index: 11;
 }
 
 #trash-droppzone {
@@ -175,7 +173,7 @@ html,body {
   background: #333 url("images/trash.png") no-repeat center center;
   width: 100px;
   height: 100px;
-  z-index: 3;
+  z-index: 12;
 }
 
 #trash-label {
@@ -190,6 +188,7 @@ html,body {
   font-size: 12px;
   font-weight: bold;
   padding: 5px 0;
+  z-index: 13;
 }
 
 #trash-label:hover {
@@ -198,6 +197,7 @@ html,body {
 
 #trash.active, #trash-droppzone.active, #container.active, #compare.active {
   background: #255260;
+  z-index: 14;
 }
 
 
