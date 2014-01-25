@@ -51,35 +51,13 @@
 
 <script>
 
-
-	/*function doSomething() {
-	    $.get("somephp.php");
-	    return false;
-	}*/
-
-
 //FILTER FOR SELECTION
 var set_min_participants = 1000;
 var set_max_participants = 3000;
 //var set_noGender = 1;
 var set_source = "website";
 
-/*			$(document).ready(function() {
-			   // setInterval(function(){
-			       $.ajax({
-			           url: "data_echoSuggestedPriorities.php",
-			           type: "GET",
-			           dataType: "html",
-			           success: function(html) {
-			           $("#content").html(html);
-			        }
-			      });//end ajax call
-			  // },2500);//end setInterval
-
-			});//end docReady
-*/
-
-var g = 99;
+var g = 99; //start value
 
 $('.bar_interactive').click(function(){
 	//event.preventDefault();
@@ -92,43 +70,30 @@ $('.bar_interactive').click(function(){
 		g=2;
 		console.log("g=2");
 	}
-	g=1;
+	
 
 	$.ajax({
            type: 'GET',
            url: 'filter.php',
            //data: {'gender': g},
            //data: { gender: 1},
-           //data: "gender="+g,
            data: "gender=" + g,
-           //data: "gender=1",
            dataType: "html",
            success: function(html) {
-           //$("#content").html(html);
            
            var m = "<?php echo $value_gender_m;?>";
            var w = "<?php echo $value_gender_w;?>";
            var f = "<?php echo $filter_gender2;?>";
-           console.log("filter.php filters gender vor value: " + f);
-           console.log("g is "+g);
+           console.log("filter.php filters gender vor value: " + f); // no value for f returned. There is the problem?!
+           console.log("g is "+g); // gives an correct result
            console.log(m + " " + w);
            $('#bar_gender_m').css('width' , m);
            $('#bar_gender_w').css('width' , w);
-		   //update treemap somehow
-           //drawTreemap(g);
-           //console.log("draw new treemap");
+	    //update treemap somehow
+           drawTreemap(g);
            }
       });
-	//return false;
 });
-
-
-
-
-//d3.slider().axis( d3.svg.axis().orient("top").ticks(6)); 
-
-
-//$(document).append('<div>'+filter_pref+'</div>');
 
 	var color = d3.scale.ordinal().range(['#edf8e9', '#31a354','#006d2c', '#74c476','#c7e9c0' ]);
 
@@ -140,19 +105,11 @@ $('.bar_interactive').click(function(){
 var drawTreemap = function(g){
 
 
-	//request.php?id="+variable
-
-			//"/auswertung.php?name='+ name + '&nickname='+ nickname + '&punkte='+ punkte + '"
-
 
 	d3.json("data_echoJsonStructure.php?max_participants="+set_max_participants + 
 		"&min_participants="+ set_min_participants + 
 		"&noGender=" + g + 
 		"&source=" + set_source, function (data){
-	//d3.json("data_echoJsonStructure.php", function (data){
-
-	//d3.json("data_echoJsonStructure.php?max_participants="+set_max_participants, function (data){
-
 
 	var treemap = d3.layout.treemap()
 		.size([1300,65])
@@ -175,10 +132,10 @@ var drawTreemap = function(g){
 		.attr("stroke", "#fff");
 
 	cells.append("text")
-		/*.attr("x", function (d) {return d.x +  2})
+		.attr("x", function (d) {return d.x +  2})
 		.attr("y", function (d) {return d.y +  12})
 		.text(function (d) {return d.children ? null : d.name.substr(0,12);})
-		.attr("fill", "#000")*/
+		.attr("fill", "#000")
 
 	})
 }
@@ -187,7 +144,6 @@ drawTreemap(99);
 
 </script>
 
-<!--<a href="#" onclick="doSomething();">Click Me!</a>-->
 <div id="content">loading content...</div>
 
 
