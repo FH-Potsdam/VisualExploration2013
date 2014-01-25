@@ -1,0 +1,24 @@
+@charset "UTF-8";
+/* CSS Document */
+
+
+body{
+font-family: Verdana;
+color: #333;
+font-size: 10px;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+span.participants_meta{
+	color: #777;
+}
+
+/*** BEGIN TEMPORARY STYLES***/
+.border{
+border: solid thin #FFF;
+}
+/*** END TEMPORARY STYLES***/
