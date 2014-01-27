@@ -77,20 +77,28 @@ $('.bar_interactive').click(function(){
            url: 'filter.php',
            //data: {'gender': g},
            //data: { gender: 1},
-           data: "gender=" + g,
-           dataType: "html",
-           success: function(html) {
-           
-           var m = "<?php echo $value_gender_m;?>";
-           var w = "<?php echo $value_gender_w;?>";
-           var f = "<?php echo $filter_gender2;?>";
-           console.log("filter.php filters gender vor value: " + f); // no value for f returned. There is the problem?!
-           console.log("g is "+g); // gives an correct result
-           console.log(m + " " + w);
-           $('#bar_gender_m').css('width' , m);
-           $('#bar_gender_w').css('width' , w);
-	    //update treemap somehow
-           drawTreemap(g);
+           data: {
+           	gender: g
+           },
+           success: function(data) {
+           		var json = JSON.parse(data);
+
+           		console.log(json);
+
+	           var m = json.m;
+	           var w = json.w;
+	           var sum = json.sum;
+
+	           //DIESEN WERT GIBT ES NICHT IN DEINER FILTER.php
+	           //var f = obj.f;
+
+	           console.log("filter.php filters gender vor value: " + f); // no value for f returned. There is the problem?!
+	           console.log("g is "+g); // gives an correct result
+	           console.log(m + " " + w);
+	           $('#bar_gender_m').css('width' , m);
+	           $('#bar_gender_w').css('width' , w);
+		    //update treemap somehow
+	           drawTreemap(g);
            }
       });
 });
