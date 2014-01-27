@@ -56,6 +56,12 @@ $value_gender_w = 450 - $value_gender_m;
 //echo $value_gender_m . " " . $value_gender_w;
 
 
+echo json_encode(array(
+	"sum" => $count_gender_sum,
+	"m" => $value_gender_m,
+	"w" => $value_gender_w
+));
+
 mysql_free_result($result);
 
 ?>
