@@ -12,16 +12,6 @@ if (!$link = mysql_connect('localhost', 'root', 'root')) {
 	}
 
 
-/*
-$id_to_attr = array(
-		"bar_gender_m" => "1",
-		"bar_gender_w" => "2",
-		"bar_source_sms" => "sms",
-		"bar_source_website" => "website",
-		"bar_source_offline" => "offline",
-		"bar_source_apps" => "apps",
-	);
-*/
 
 // INITIALIZING BOOLEANS: WHAT FILTER IST CLICKED?
 // CLICKED ONE WILL NOT BE UPDATED. THE REST IS.
@@ -57,30 +47,14 @@ $id_to_attr = array(
 
 
 
-	//$test_output = "gender_clicked: " . $gender_clicked . "source_clicked: " . $source_clicked;
-
-
 // INITIALIZING RETURNING VARIABLES
 	$count_sources = array();
 
-// INITIALITING INCOMING VARIABLES (GET)
-	// ...
-
-// CONDITIONS
-	// CONDITION GENDER
 	
 $where_clause = $sql_gender . " AND " . $sql_source;
 
 $test_output = $where_clause;//"g: " . $gender_clicked . " s: " . $source_clicked;
 
-	// SQL REQUEST
-	/*
-	if($gender_clicked===true){
-		$sql = "SELECT source, COUNT(source)  FROM data_repl_noComma";
-	}else if($source_clicked===true){
-		$sql = "SELECT gender, COUNT(gender)  FROM data_repl_noComma";
-	}
-	*/
 
 $test_count = 0;
 
